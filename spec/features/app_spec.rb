@@ -38,11 +38,12 @@ describe "AppSpec" do
       it "displays all users except the current one" do
         page.should have_content "Rick Smith"
         page.should have_content "Jack White"
+        page.should_not have_content "Will Pitt"
       end
 
       it "filters by name" do
         fill_in "omnisearch", with: "Rick"
-        page.should_not have_content @user2.name
+        page.should_not have_content @user3.name
       end
 
       it "filters by status" do

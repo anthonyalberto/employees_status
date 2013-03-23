@@ -9,7 +9,7 @@ $ ->
   $.fn.extend(myFnFilter.filters)
             
   $("#omnisearch").on "keyup", ->
-    $(".table tbody").filterChildrenByAttributesValue($(@).val(), "data-status", "data-email", "bla")
+    $(".table tbody").filterChildrenByAttributesValue($(@).val(), "data-status", "data-email", "data-name")
 
   $("#reload").on "click", (e) ->
     location.reload()

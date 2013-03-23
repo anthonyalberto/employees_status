@@ -1,0 +1,15 @@
+.online {background-color: rgb(203, 255, 203);}
+.takes_a_break, .lunching {background-color: rgb(255, 255, 168);}
+.offline {background-color: rgb(201, 201, 201);}
+
+#omnisearch { width:97%; margin-bottom:30px;}
+.update_status{margin-bottom:30px;height: 45px;}
+.update_status label{
+  float:left;
+  font-weight:bold;
+  margin-right:10px;
+  line-height:28px;
+}
+.update_status img{ display: none; }
+.clear {clear: both;}
+#logout { float:right; }

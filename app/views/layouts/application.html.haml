@@ -27,13 +27,14 @@
             %span.icon-bar
           %a.brand(href="#") Clio Employees Status
           .container.nav-collapse
+            = yield(:status_header)
 
 
     .container-fluid
 
       .row-fluid
 
-        .span9
+        .main
           = bootstrap_flash
           = yield
     

@@ -1,0 +1,22 @@
+- content_for :status_header do
+  = render 'status_header'
+
+.update_status
+  = label_tag 'status', "My Status"
+  = select_tag_for_statuses(@statuses, current_user.status)
+  = image_tag "spinner.gif", class: "loader"
+.clear
+= text_field_tag "omnisearch", "", placeholder: "Start typing to filter by name, email, or status", class: "input-medium search-query"
+
+%table.table
+  %thead
+    %tr
+      %th Email
+      %th Name
+      %th Status
+  %tbody
+    - @users.each do |user|
+      %tr{ data: { email: user.email, status: user.status.name, name: user.name }, class: user.status.css_class_name}
+        %td= user.email
+        %td= user.name
+        %td= user.status.name

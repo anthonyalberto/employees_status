@@ -40,6 +40,11 @@ RSpec.configure do |config|
   Capybara.javascript_driver = :webkit
 
   config.before(:each) do
+    if Capybara.current_driver == :rack_test
+      DatabaseCleaner.strategy = :transaction
+    else
+      DatabaseCleaner.strategy = :truncation
+    end
     if Capybara.current_driver == :webkit
       require 'headless'
 

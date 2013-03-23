@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_ujs_extended
+//= require jquery.regex-selector
 //= require twitter/bootstrap
 //= require_tree .
